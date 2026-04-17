@@ -36,6 +36,6 @@ public class ObjectDescriber {
             System.out.println(describe(sample));
         }
         // Проверь себя: пустая строка и непустая строка должны различаться.
-        // Типичные ошибки: забывают обработать default.
+        // Типичные ошибки: забывают обработать default./
     }
 }

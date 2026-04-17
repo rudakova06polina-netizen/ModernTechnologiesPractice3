@@ -3,7 +3,7 @@ package part2.part2_2;
 public class Fibonacci {
 
     public static long fibIterative(int n) {
-        // TODO: реализуйте while-вариант.
+        // TODO: реализуйте while-вариант..
         // Подсказка: базовые случаи n=0 и n=1 обработайте отдельно.
         // ▼ ВАШ КОД ЗДЕСЬ ▼
         if (n == 0) return 0;

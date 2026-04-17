@@ -4,7 +4,7 @@ public class GradeChecker {
 
     public static String getGradeClassic(int score) {
         // TODO: реализуйте вариант через классический switch.
-        // Подсказка: удобно сначала вычислить "десяток" score / 10.
+        // Подсказка: удобно сначала вычислить "десяток" score / 10..
         // ▼ ВАШ КОД ЗДЕСЬ ▼
         int tens = score / 10;
 
