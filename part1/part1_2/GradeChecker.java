@@ -25,9 +25,9 @@ public class GradeChecker {
 
         switch (tens) {
             case 10, 9 -> { return "Отлично (A)"; }
-            case 8      -> { return "Хорошо (B)"; }
-            case 7      -> { return "Удовлетворительно (C)"; }
-            default     -> { return "Неудовлетворительно (F)"; }
+            case 8 -> { return "Хорошо (B)"; }
+            case 7 -> { return "Удовлетворительно (C)"; }
+            default -> { return "Неудовлетворительно (F)"; }
         }
     }
         // ▲ КОНЕЦ ВАШЕГО КОДА ▲
