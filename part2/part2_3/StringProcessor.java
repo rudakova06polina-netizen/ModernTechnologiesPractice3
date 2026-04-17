@@ -6,7 +6,16 @@ public class StringProcessor {
     public static int countVowels(String text) {
         // TODO: посчитайте русские и английские гласные.
         // ▼ ВАШ КОД ЗДЕСЬ ▼
-        return -1;
+        int count = 0;  // счётчик гласных
+        for (int i = 0; i < text.length(); i++) {
+            char symbol = text.charAt(i);
+
+            if (VOWELS.indexOf(symbol) != -1) {
+                count++;
+            }
+        }
+
+        return count;
         // ▲ КОНЕЦ ВАШЕГО КОДА ▲
     }
 
