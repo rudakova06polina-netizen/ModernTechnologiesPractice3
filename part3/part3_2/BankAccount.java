@@ -22,7 +22,7 @@ public class BankAccount {
     public boolean deposit(double amount) {
         // TODO: пополнение разрешено только при amount > 0.
         // ▼ ВАШ КОД ЗДЕСЬ ▼
-        return false;
+        if (amount > 0) balance += amount; else return false; return true;
         // ▲ КОНЕЦ ВАШЕГО КОДА ▲
     }
 
@@ -33,6 +33,16 @@ public class BankAccount {
         // 3) при 3 неверных попытках blocked=true;
         // 4) верный PIN сбрасывает failedAttempts и проверяет amount.
         // ▼ ВАШ КОД ЗДЕСЬ ▼
+        if (blocked) return false;
+        if (!validatePin(enteredPin)) {
+            if (++failedAttempts >= 3) blocked = true;
+            return false;
+        }
+        failedAttempts = 0;
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+            return true;
+        }
         return false;
         // ▲ КОНЕЦ ВАШЕГО КОДА ▲
     }
@@ -40,7 +50,7 @@ public class BankAccount {
     public String getMaskedBalance() {
         // TODO: скрывайте суммы свыше 100000.
         // ▼ ВАШ КОД ЗДЕСЬ ▼
-        return "TODO";
+        if (balance > 100000) return "*****"; else return String.valueOf(balance);
         // ▲ КОНЕЦ ВАШЕГО КОДА ▲
     }
 
