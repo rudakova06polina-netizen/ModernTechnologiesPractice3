@@ -23,21 +23,42 @@ public class StringProcessor {
         // TODO: палиндром без учета регистра и знаков препинания.
         // Подсказка: сравнение символов с двух концов.
         // ▼ ВАШ КОД ЗДЕСЬ ▼
-        return false;
+        String word = text.toLowerCase();
+        for (int i = 0; i < word.length() / 2; i++) {
+            if (word.charAt(i) != word.charAt(word.length() - 1 - i)) {
+                return false;
+            }
+        }
+        return true;
         // ▲ КОНЕЦ ВАШЕГО КОДА ▲
     }
 
     public static String reverse(String text) {
         // TODO: реверс без StringBuilder.
         // ▼ ВАШ КОД ЗДЕСЬ ▼
-        return "";
+        String result = "";
+        for (int i = text.length() - 1; i >= 0; i--) {
+            result = result + text.charAt(i);
+        }
+
+        return result;
         // ▲ КОНЕЦ ВАШЕГО КОДА ▲
     }
 
     public static String findLongestWord(String sentence) {
         // TODO: найдите самое длинное слово.
         // ▼ ВАШ КОД ЗДЕСЬ ▼
-        return "";
+        String[] words = sentence.split(" ");
+        String longest = "";
+
+        // смотрим каждое слово по очереди
+        for (int i = 0; i < words.length; i++) {
+            if (words[i].length() > longest.length()) {
+                longest = words[i];
+            }
+        }
+
+        return longest;
         // ▲ КОНЕЦ ВАШЕГО КОДА ▲
     }
 
