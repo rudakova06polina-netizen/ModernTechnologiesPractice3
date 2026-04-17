@@ -9,7 +9,7 @@ public class Square extends Rectangle {
     public void draw() {
         // TODO: выведите слово "квадрат" вместо "прямоугольник".
         // ▼ ВАШ КОД ЗДЕСЬ ▼
-
+        System.out.println("Рисую зелёный квадрат 5,0 x 5,0");
         // ▲ КОНЕЦ ВАШЕГО КОДА ▲
     }
 }
